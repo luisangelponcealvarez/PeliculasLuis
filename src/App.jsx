@@ -1,9 +1,7 @@
+import cargarPeliculas from "./components/api";
+
 function App() {
-  return (
-    <>
-      <h1>hola</h1>
-    </>
-  );
+  return <>{cargarPeliculas()}</>;
 }
 
 export default App;
