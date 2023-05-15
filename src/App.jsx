@@ -1,7 +1,7 @@
-import cargarPeliculas from "./components/api";
+import CargarPeliculas from "./components/api";
 
 function App() {
-  return <>{cargarPeliculas()}</>;
+  return <>{CargarPeliculas}</>;
 }
 
 export default App;
