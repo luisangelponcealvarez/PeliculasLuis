@@ -1,7 +1,11 @@
-import CargarPeliculas from "./components/api";
+import Home from "./Componts/Home";
 
 function App() {
-  return <>{CargarPeliculas}</>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;
