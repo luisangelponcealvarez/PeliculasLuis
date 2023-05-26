@@ -5,6 +5,7 @@ import "./main.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error404 from "./components/404";
 import Contacto from "./components/Contacto/Contacto";
+import Site from "./components/site";
 
 const routes = [
   {
@@ -14,6 +15,10 @@ const routes = [
   {
     path: "/Contact",
     element: <Contacto />,
+  },
+  {
+    path: "/pokemon/1/",
+    element: <Site />,
   },
   {
     path: "/*",

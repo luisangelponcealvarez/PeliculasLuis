@@ -10,7 +10,7 @@ function CardPokemon({ url }) {
       {cargando ? (
         <h1>cargando</h1>
       ) : (
-        <Link to={data.name}>
+        <Link to={data.id}>
           <div className="card" style={{ width: "14rem" }}>
             <div className="card-header">
               <h5 className="card-title">{data.id}</h5>
