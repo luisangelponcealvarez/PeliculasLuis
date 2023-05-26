@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./main.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Error404 from "./Componts/404";
+import Error404 from "./components/404";
 
 const routes = [
   {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Api from "../Api";
 import Cards from "../Cards";
+import Heder from "../Heder";
 
 function Home() {
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
@@ -13,6 +14,7 @@ function Home() {
         <h1>Cargando...</h1>
       ) : (
         <>
+          <Heder />
           <Cards results={data.results} />
 
           <div className="container m-auto text-center">
