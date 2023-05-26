@@ -4,11 +4,16 @@ import App from "./App";
 import "./main.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error404 from "./components/404";
+import Contacto from "./components/Contacto/Contacto";
 
 const routes = [
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/Contact",
+    element: <Contacto />,
   },
   {
     path: "/*",

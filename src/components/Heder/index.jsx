@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 function Heder() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-info-subtle">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="#">
           PokeApiLuis
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,6 +23,15 @@ function Heder() {
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">
                 Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/Contact"
+              >
+                Contacto
               </Link>
             </li>
           </ul>

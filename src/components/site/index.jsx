@@ -1,9 +1,7 @@
 function Site({ url }) {
   return (
     <>
-      <div className="card" style={{ width: "14rem" }}>
-        <h1>hola</h1>
-      </div>
+      <h1>esta es el site</h1>
     </>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Api from "../Api";
 import Cards from "../Cards";
 import Heder from "../Heder";
+import Footer from "../Footer";
 
 function Home() {
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
@@ -16,18 +17,18 @@ function Home() {
         <>
           <Heder />
           <Cards results={data.results} />
-
-          <div className="container m-auto text-center">
-            <button
+          <div className="m-auto text-center">
+            <a
               onClick={() => setUrl(data.previous)}
               className="m-2 btn btn-dark"
             >
               Anterior
-            </button>
-            <button onClick={() => setUrl(data.next)} className="btn btn-dark">
+            </a>
+            <a onClick={() => setUrl(data.next)} className="btn btn-dark">
               Siguiente
-            </button>
+            </a>
           </div>
+          <Footer />
         </>
       )}
     </>
