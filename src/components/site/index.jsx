@@ -1,7 +1,15 @@
-function Site({ url }) {
+import Footer from "../Footer";
+import Heder from "../Heder";
+import "./site.css";
+
+function Site() {
   return (
     <>
-      <h1>esta es el site</h1>
+      <Heder />
+      <div className="container">
+        <h1>hola</h1>
+      </div>
+      <Footer />
     </>
   );
 }

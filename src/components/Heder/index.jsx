@@ -1,6 +1,24 @@
 import { Link } from "react-router-dom";
+import Api from "../Api";
 
 function Heder() {
+  async function init() {
+    const pokemon = await Api(1);
+    updatePokemon(pokemon);
+  }
+
+  init();
+
+  function updatePokemon(pokemon) {
+    window.image.setAttribute(`src`, pokemon.sprites.front_default);
+    window.Api.textContent = Api.name;
+  }
+
+  window.search.addEventListener(`change`, async () => {
+    const pokemon = await Api(window.search.value);
+    updatePokemon(pokemon);
+  });
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-info-subtle">
       <div className="container-fluid">
@@ -39,12 +57,9 @@ function Heder() {
             <input
               className="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Nombre o Id"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
           </form>
         </div>
       </div>

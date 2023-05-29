@@ -17,7 +17,6 @@ const routes = [
     element: <Contacto />,
   },
   {
-    path: "/pokemon/1/",
     element: <Site />,
   },
   {
