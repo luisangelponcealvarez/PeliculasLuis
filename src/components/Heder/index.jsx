@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Api from "../Api";
+import Site from "../site";
 
 function Heder() {
   async function init() {
@@ -10,14 +11,13 @@ function Heder() {
   init();
 
   function updatePokemon(pokemon) {
-    window.image.setAttribute(`src`, pokemon.sprites.front_default);
-    window.Api.textContent = Api.name;
+    <Site src={pokemon.sprites.front_default} name={forms.name} />;
   }
-
   window.search.addEventListener(`change`, async () => {
     const pokemon = await Api(window.search.value);
     updatePokemon(pokemon);
   });
+  console.log(pokemon);
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-info-subtle">
@@ -55,6 +55,7 @@ function Heder() {
           </ul>
           <form className="d-flex" role="search">
             <input
+              id="search"
               className="form-control me-2"
               type="search"
               placeholder="Nombre o Id"
