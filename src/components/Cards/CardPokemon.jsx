@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
 import Api from "../Api";
 import React from "react";
+import { Cargando } from "../Cargando";
 
 function CardPokemon({ url }) {
   const estado = Api(url);
+
   const { cargando, data } = estado;
+
   return (
     <>
       {cargando ? (
-        <h1>cargando</h1>
+        <Cargando />
       ) : (
         <Link to={data.id}>
           <div className="card" style={{ width: "14rem" }}>

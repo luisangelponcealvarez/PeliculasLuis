@@ -3,6 +3,7 @@ import Api from "../Api";
 import Cards from "../Cards";
 import Heder from "../Heder";
 import Footer from "../Footer";
+import { Cargando } from "../Cargando";
 
 function Home() {
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
@@ -12,10 +13,10 @@ function Home() {
   return (
     <>
       {cargando ? (
-        <h1>Cargando...</h1>
+        <Cargando />
       ) : (
         <>
-          <Heder />
+          {/* <Heder /> */}
           <Cards results={data.results} />
           <div className="m-auto text-center">
             <a
