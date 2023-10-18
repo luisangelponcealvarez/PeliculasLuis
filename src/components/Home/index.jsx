@@ -6,7 +6,7 @@ import Footer from "../Footer";
 import { Cargando } from "../Cargando";
 
 function Home() {
-  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
+  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=54");
   const estado = Api(url);
   const { cargando, data } = estado;
 
